@@ -6,7 +6,7 @@
 /*   By: hyap <hyap@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 16:52:34 by hyap              #+#    #+#             */
-/*   Updated: 2022/01/26 22:05:54 by hyap             ###   ########.fr       */
+/*   Updated: 2022/02/27 17:25:13 by hyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,14 @@ int	ft_printf(const char *av, ...)
 	{
 		if (str[attr->i] == '%')
 			size += conversion(str, ++attr->i, ap);
-		else 
+		else
+		{
 			ft_putchar(str[attr->i]);
-		size++;
+			size++;
+		}
 		attr->i++;
 	}
 	va_end(ap);
-	return (0);
+	free(attr);
+	return (size);
 }

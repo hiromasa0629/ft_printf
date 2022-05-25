@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_c.c                                          :+:      :+:    :+:   */
+/*   print_d_i.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyap <hyap@student.42kl.edu.my>            +#+  +:+       +#+        */
+/*   By: hyap <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/20 01:26:10 by hyap              #+#    #+#             */
-/*   Updated: 2022/02/26 21:12:39 by hyap             ###   ########.fr       */
+/*   Created: 2022/02/26 16:10:25 by hyap              #+#    #+#             */
+/*   Updated: 2022/02/26 20:55:23 by hyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int	print_c(char c)
+int	print_d_i(int num)
 {
-	ft_putchar(c);
-	return (1);
+	int	len;
+
+	len = ft_numlen(num);
+	if (num < 0)
+		len += 1;
+	ft_putnbr(num);
+	return (len);
 }

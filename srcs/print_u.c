@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   print_u.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyap <hyap@student.42kl.edu.my>            +#+  +:+       +#+        */
+/*   By: hyap <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/20 00:50:19 by hyap              #+#    #+#             */
-/*   Updated: 2022/02/12 14:18:21 by hyap             ###   ########.fr       */
+/*   Created: 2022/02/26 16:37:54 by hyap              #+#    #+#             */
+/*   Updated: 2022/02/26 20:59:33 by hyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "../includes/ft_printf.h"
 
-int	main(void)
+int	print_u(unsigned int num)
 {
-	char	c;
-//	char	*s;
-
-	c = 's';
-//	s = "Hello world";
-//	printf("%p", "hello");
-	ft_printf("%c %c", 'l', 'K');
-	return (0);
+	ft_putnbr(num);
+	return (ft_numlen(num));
 }
